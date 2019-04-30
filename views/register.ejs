@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="/img/fav-icon.png" />
+
+    <title>Crypto2Price</title>
+    <!-- Icon css link -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/themify-icon/themify-icons.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Rev slider css -->
+    <link href="/vendors/revolution/css/settings.css" rel="stylesheet">
+    <link href="/vendors/revolution/css/layers.css" rel="stylesheet">
+    <link href="/vendors/revolution/css/navigation.css" rel="stylesheet">
+    <link href="/vendors/animate-css/animate.css" rel="stylesheet">
+    <!-- Extra plugin css -->
+    <link href="/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+
+    <style>
+      #logout_div{
+        margin-top: 200px;
+        margin-bottom: 50px;
+      }
+    </style>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <!-- == Navigation Bar Start == -->
+   <!--================End Search Area =================-->
+
+   <!--================Header Menu Area =================-->
+   <header class="main_menu_area" style="background-color: #5D6D7E  ;">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <a class="navbar-brand" href="/"><h3 style="color: white;"> Crypto2Price </h3></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span></span>
+               <span></span>
+               <span></span>
+           </button>
+
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                   <li class="nav-item"><a class="nav-link" href="/" >Home</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/users/aboutUs" target="_blank">About Us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/users/login">Login</a></li>
+                   <li class="nav-item active"><a class="nav-link" href="/users/register">Register</a></li>
+               </ul>
+               <ul class="navbar-nav justify-content-end">
+                   <li><a href="#"><i class="icon_search"></i></a></li>
+               </ul>
+           </div>
+       </nav>
+   </header>
+   <!--================End Header Menu Area =================-->
+
+      <!-- == Error Messages == -->
+      <div class="container">
+        <div class="col-lg-12">
+          <% if(success_msg.length > 0){ %>
+            <div class="alert alert-success"><%= success_msg %> </div>
+          <% } %>
+
+          <% if(error_msg.length > 0){ %>
+            <div class="alert alert-danger"><%= error_msg %> </div>
+          <% } %>
+
+          <% if(error.length > 0){ %>
+            <div class="alert alert-danger"><%= error %> </div>
+          <% } %>
+        </div>
+      </div>
+      <!-- == Error Messages End == -->
+
+ <!-- == Main body starts here == -->
+
+<div class="container" id="logout_div">
+
+  <h3 class="page-header">Register</h3>
+
+    <form method="post" action="/users/register">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Enter Password">
+       </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" name="password2" placeholder="Enter Confirm Password">
+       </div>
+       <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+</div>
+
+<!--================Footer Area =================-->
+<footer class="footer_area">
+    <div class="footer_widgets_area">
+        <div class="container">
+            <div class="f_widgets_inner row">
+                <div class="col-lg-4 col-md-6">
+                    <aside class="f_widget subscribe_widget">
+                        <div class="f_w_title">
+                            <h3>Our Newsletter</h3>
+                        </div>
+                        <p>Subscribe to our mailing list to get the updates to your email inbox.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
+                            </span>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <aside class="f_widget categories_widget">
+                        <div class="f_w_title">
+                            <h3>Link Categories</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Home</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <aside class="f_widget contact_widget">
+                      <div class="f_w_title">
+                          <h3>Contact Us</h3>
+                      </div>
+                        <h6> Md. Mehadi Hasan <br> 23rd batch, CSE department of SUST.<br><br>
+                          email: mehadi541@gmail.com<br>
+                          mobile no: 01796-777157
+                        </h6>
+                        <br><br>
+                        <h6> Mirza Karmul Bashar Shuhan <br> 23rd batch, CSE department of SUST.<br><br>
+                          email: shuhan.mirza@gmail.com<br>
+                          mobile no: 01621-416121
+                        </h6>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy_right_area">
+        <div class="container">
+            <center>
+                <h5 style="color: #D1B7B1;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Crypto2Price, SUST CSE</h5>
+            </center>
+        </div>
+    </div>
+</footer>
+<!--================End Footer Area =================-->
+
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!--HighChart JS file-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Rev slider js -->
+    <script src="/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+    <script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+
+</body>
+</html>

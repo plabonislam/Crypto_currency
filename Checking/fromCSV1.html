@@ -1,0 +1,54 @@
+<div id="container" style="height: 600px">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+<script>
+
+
+$(function() {
+
+    var magx = [];
+
+    $.get('data.csv', function(csv1) {
+
+                var lines = csv1.split('\n');
+
+                $.each(lines, function(lineNo, line) {
+                       var items = line.split(',');
+
+                       if(lineNo > 0) {
+                            var ds1 = items[0].split(' ');
+                                magx.push( [ Date.parse(ds1[0] + "T" + ds1[1]) , parseFloat(items[1]) ] );
+                       };
+                });
+
+                var options = {
+
+                xAxis: {
+                type: 'datetime'
+                },
+
+                exporting: {
+                enabled: true
+                },
+
+                series: [{
+                         name: 'Data 1',
+                         data: magx
+                         }]
+
+                };
+
+                var chart = $('#container').highcharts('StockChart', options);
+
+            });
+
+          });
+
+
+</script>

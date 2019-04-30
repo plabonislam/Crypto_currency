@@ -1,0 +1,215 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="/img/fav-icon.png" />
+        <title>Crypto2Price</title>
+
+        <!-- Icon css link -->
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/vendors/themify-icon/themify-icons.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Rev slider css -->
+        <link href="/vendors/revolution/css/settings.css" rel="stylesheet">
+        <link href="/vendors/revolution/css/layers.css" rel="stylesheet">
+        <link href="/vendors/revolution/css/navigation.css" rel="stylesheet">
+        <link href="/vendors/animate-css/animate.css" rel="stylesheet">
+        <!-- Extra plugin css -->
+        <link href="/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/responsive.css" rel="stylesheet">
+        <style>
+          #table_div{
+            margin-top: 100px;
+          }
+        </style>
+    </head>
+<body>
+
+<div>
+  <section class="search_area">
+      <div class="search_inner">
+          <input type="text" placeholder="Enter Your Search...">
+          <i class="ti-close"></i>
+      </div>
+  </section>
+  <!--================End Search Area =================-->
+
+  <!--================Header Menu Area =================-->
+  <header class="main_menu_area" style="background-color: #34495E;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/"><h3 style="color: white;"> Crypto2Price </h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/users/aboutUs" target="_blank">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/users/logout">Logout</a></li>
+              </ul>
+              <ul class="navbar-nav justify-content-end">
+                  <li><a href="#"><i class="icon_search"></i></a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  <!--================End Header Menu Area =================-->
+
+
+    <!--================Slider Area =================-->
+    <section class="main_slider_area">
+        <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
+            <ul>
+                <li data-index="rs-2947" data-transition="slidevertical" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <div class="slider_text_box">
+
+                        <div class="tp-caption tp-resizeme slider_button"
+                            data-x="['center','center','center','center','center','center']"
+                            data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']"
+                            data-voffset="['130','130','130','100','100','100']"
+                            data-width="800px"
+                            data-height="600px"
+                            data-whitespace="nowrap"
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['center','center','center','center','center','center']"
+                            >
+                            <div class="container" style="background-color: #F5B7B1; padding-top: 30px; padding-bottom: 30px;">
+                              <h5>How we can get information from the following chart</h5><br>
+                              <p>The chart show us the historical prices of a <br>
+                                 cryptocurrency within a time range. <br>
+                                 First of all, the above section of the graph  <br>
+                                 have 4 buttons. When we click each button the  <br>
+                                 graph will be zoomed in the specific time based. <br>
+                                 Then, we can zoom it manually by clicking and  <br>
+                                sliding. This graph shows each cryptocurrency <br>
+                                prices in USD($) currency.</p><br>
+                                <a href="#chart_showDiv" class="btn btn-primary bg_btn" >Get started</a>
+                            </div>
+                            <!-- <button class="bg_btn" id="get_start_button" data-target="#benifits_section" role="dialog" aria-hidden="true">Get started</button> -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--================End Slider Area =================-->
+
+  <div class="container">
+
+
+
+    <div id="chart_showDiv" style="height: 600px">
+
+    </div>
+
+  </div>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+  <script>
+
+  // $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/large-dataset.json', function (data) {
+      $.getJSON('/<%= FILE_NAME %>', function (data) {
+
+      // Create the chart
+      Highcharts.stockChart('chart_showDiv', {
+          chart: {
+              type: 'line',
+              zoomType: 'x',
+              panning: true,
+              panKey: 'shift'
+          },
+          rangeSelector: {
+              inputEnabled:false,
+              buttons: [{
+                  type: 'day',
+                  count: 3,
+                  text: '3d'
+              }, {
+                  type: 'week',
+                  count: 1,
+                  text: '1w'
+              }, {
+                  type: 'month',
+                  count: 1,
+                  text: '1m'
+              }, {
+                  type: 'all',
+                  text: 'All'
+              }],
+              selected: 2
+          },
+          xAxis: {
+              title: {
+                  text: 'Date'
+              }
+          },
+          yAxis: {
+              title: {
+                  text: 'Price (USD)'
+              }
+          },
+          scrollbar: {
+              enabled: true
+          },
+          title: {
+              text: 'Prices of <b><%= NAME %></b>  in 2010-2018'
+          },
+
+          subtitle: {
+              text: 'Digital currency price chart' // dummy text to reserve space for dynamic subtitle
+          },
+          series: [{
+              name: 'CryptoCurrency Price',
+              data: data.data,
+              pointStart: data.pointStart,
+              pointInterval: data.pointInterval,
+              tooltip: {
+                  valueDecimals: 1,
+                  valueSuffix: ' USD'
+              }
+          }]
+
+      });
+      });
+
+  </script>
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- Rev slider js -->
+  <script src="/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+  <script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
+
+  <script src="/js/theme.js"></script>
+
+</body>
+</html>

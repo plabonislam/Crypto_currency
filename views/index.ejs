@@ -1,0 +1,529 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="/img/fav-icon.png" />
+        <title>Crypto2Price</title>
+
+        <!-- Icon css link -->
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/vendors/themify-icon/themify-icons.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Rev slider css -->
+        <link href="/vendors/revolution/css/settings.css" rel="stylesheet">
+        <link href="/vendors/revolution/css/layers.css" rel="stylesheet">
+        <link href="/vendors/revolution/css/navigation.css" rel="stylesheet">
+        <link href="/vendors/animate-css/animate.css" rel="stylesheet">
+        <!-- Extra plugin css -->
+        <link href="/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/responsive.css" rel="stylesheet">
+        <style>
+          #table_div{
+            margin-top: 100px;
+          }
+        </style>
+    </head>
+<body>
+
+<div class="container-fluid">
+     <!-- == Navigation Bar Start == -->
+      <!--================Search Area =================-->
+      <section class="search_area">
+          <div class="search_inner">
+              <input type="text" placeholder="Enter Your Search...">
+              <i class="ti-close"></i>
+          </div>
+      </section>
+      <!--================End Search Area =================-->
+
+      <!--================Header Menu Area =================-->
+      <header class="main_menu_area">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="/"><h3 style="color: white;"> Crypto2Price </h3></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/users/aboutUs" target="_blank">About Us</a></li>
+                      <% if(username.length > 0){ %>
+                          <li class="nav-item"><a class="nav-link" href="/users/logout">Logout</a></li>
+                      <% } %>
+                      <% if(username.length <= 0){ %>
+                          <li class="nav-item"><a class="nav-link" href="/users/login">Login</a></li>
+                          <li class="nav-item"><a class="nav-link" href="/users/register">Register</a></li>
+                      <% } %>
+                  </ul>
+                  <ul class="navbar-nav justify-content-end">
+                      <li><a href="#"><i class="icon_search"></i></a></li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+      <!--================End Header Menu Area =================-->
+
+      <!--================Slider Area =================-->
+      <section class="main_slider_area">
+          <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
+              <ul>
+                  <li data-index="rs-2947" data-transition="slidevertical" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                  <!-- MAIN IMAGE -->
+                      <!-- <img src="/img/back_img/12.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina> -->
+                      <img src="/img/back_img/12.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                      <!-- LAYER NR. 1 -->
+                      <div class="slider_text_box">
+
+                          <div class="tp-caption tp-resizeme slider_button"
+                              data-x="['center','center','center','center','center','center']"
+                              data-hoffset="['0','0','0','0']"
+                              data-y="['middle','middle','middle','middle']"
+                              data-voffset="['130','130','130','100','100','100']"
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-type="text"
+                              data-responsive_offset="on"
+                              data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                              data-textAlign="['center','center','center','center','center','center']">
+                              <a href="#benifits_section" class="btn btn-primary bg_btn" >Get started</a>
+                              <!-- <button class="bg_btn" id="get_start_button" data-target="#benifits_section" role="dialog" aria-hidden="true">Get started</button> -->
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </section>
+      <!--================End Slider Area =================-->
+
+      <!--================Creative Feature Area =================-->
+      <section class="creative_feature_area" id="benifits_section">
+          <div class="container">
+              <div class="c_feature_box">
+                <center><h2>Most Important Benifits of Cryptocurrency</h2></center>
+                  <div class="row">
+                      <div class="col-lg-4">
+                          <div class="c_box_item">
+                              <h4><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Code ability </h4>
+                              <p>Cryptocurrency is a digital money, created from code.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="c_box_item">
+                              <h4><i class="fa fa-clock-o" aria-hidden="true"></i> Access ability </h4>
+                              <p>Free fo all governmental oversight. The cryptocurrency economy is monitored by a peer-to-peer internet protocol.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="c_box_item">
+                              <h4><i class="fa fa-diamond" aria-hidden="true"></i> Security </h4>
+                              <p>Cryptocurrency is an encrypted string of data or a hash, encoded to signifyone unit of currency.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="table_div">
+                <center><h3>Top 20 Cryptocurrencies by Market Capitalization</h3></center>
+                <table class="table table-hover table-dark" style="margin-top: 20px;">
+                  <thead>
+                    <tr>
+                      <th scope="col"> # </th>
+                      <th scope="col"><a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#name_modal"> Name </a></th>
+                      <th scope="col"><a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#marketCapacity"> Market Capacity </a></th>
+                      <th scope="col"><a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#crypto_price"> Price </a></th>
+                      <th scope="col"><a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#prediction"> Prediction </a></th>
+                      <th scope="col"><a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#price_graph"> Price Graph </a></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <% var i; var count=1; var img_no=0; var prediction; var count_ind = 0;%>
+
+              <% for (var key in coinlist) { %>
+                    <%i= coinlist[key] %>
+                    <% img_no = img_no % 5; %>
+                    <%
+                      var marketcap,nStr,price_value;
+                      nStr = prices[i]['USD']['MKTCAP'];
+                      price_value = prices[i]['USD']['PRICE'];
+
+                      if(count_ind % 2 == 0){
+                        prediction = price_value + price_value*0.05;
+                      }else{
+                        prediction = price_value - price_value*0.05;
+                      }
+
+                      nStr += '';
+                      price_value += '';
+                      prediction += '';
+
+                      var x,y,z;
+
+                      x = nStr.split('.');
+                      y = price_value.split('.');
+                      z = prediction.split('.');
+
+                      var x1,y1,z1;
+
+                      x1 = x[0];
+                      y1 = y[0];
+                      z1 = z[0];
+
+                      var x2,y2,z2;
+
+                      x2 = x.length > 1 ? '.' + x[1] : '';
+                      y2 = y.length > 1 ? '.' + y[1] : '';
+                      z2 = z.length > 1 ? '.' + z[1] : '';
+
+                      var rgx = /(\d+)(\d{3})/;
+                      while (rgx.test(x1)) {
+                       x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                      }
+
+                      rgx = /(\d+)(\d{3})/;
+                      while (rgx.test(y1)) {
+                       y1 = y1.replace(rgx, '$1' + ',' + '$2');
+                      }
+
+                      rgx = /(\d+)(\d{3})/;
+                      while (rgx.test(z1)) {
+                       z1 = z1.replace(rgx, '$1' + ',' + '$2');
+                      }
+
+                      marketcap =  x1 + x2;
+                      price_value = y1 + y2;
+                      prediction = z1 + z2;
+                    %>
+
+                    <tr>
+                      <th scope="row"><%= count %></th>
+                      <td><%= coinnames[count-1] %></td>
+                      <td>$<%= marketcap %></td>
+                      <td>$<%= price_value %></td>
+                      <td>$<%= prediction %></td>
+                      <td><a href="/users/chartshow/<%= coinlist[count-1] %>"><img src="/img/fig<%=img_no%>.png" style="border: 2px solid green;"></a></td>
+                    </tr>
+
+                    <% count_ind = count_ind + 1; count = count+1; img_no = img_no+1;%>
+                    <% if(count == 21){ break;} %>
+
+              <% } %>
+
+                  </tbody>
+                </table>
+
+              </div>
+          </div>
+      </section>
+      <!--================End Creative Feature Area =================-->
+
+      <!-- == Error Messages == -->
+      <div class="container">
+        <div class="col-lg-12">
+          <% if(success_msg.length > 0){ %>
+            <div class="alert alert-success"><%= success_msg %> </div>
+          <% } %>
+
+          <% if(error_msg.length > 0){ %>
+            <div class="alert alert-danger"><%= error_msg %> </div>
+          <% } %>
+
+          <% if(error.length > 0){ %>
+            <div class="alert alert-danger"><%= error %> </div>
+          <% } %>
+
+        </div>
+      </div>
+      <!-- == Error Messages End == -->
+
+      <section>
+        <div class="container">
+          <div class="digital_feature p_100">
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="d_feature_text">
+                          <div class="main_title">
+                            <h2> The Future Of Cryptocurrency </h2>
+                          </div>
+                          <p>This website helps us to know about cryptocurrency and how use it.</p>
+                          <p>Actually, a cryptocurrency is a digital currency that is created and managed through the use of advanced encryption techniques known as cryptography. Cryptocurrency made the leap from being an academic concept to (virtual) reality with the creation of Bitcoin in 2009. While Bitcoin attracted a growing following in subsequent years, it captured significant investor and media attention in April 2013 when it peaked at a record $266 per bitcoin after surging 10-fold in the preceding two months.</p>
+                          <a class="read_btn" href="https://www.investopedia.com/articles/forex/091013/future-cryptocurrency.asp" target="_blank">Read more</a>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="d_feature_img">
+                          <img width="500px" height="350px" src="/img/home-slider/future.jpg" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!--================Testimonials Area =================-->
+      <section class="testimonials_area p_100">
+          <div class="container">
+              <div class="testimonials_slider owl-carousel">
+                  <div class="item">
+                      <div class="media">
+                          <img class="d-flex rounded-circle" src="img/testimonials-1.png" alt="">
+                          <div class="media-body">
+                              <img src="img/dotted-icon.png" alt="">
+                              <p>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</p>
+                              <h4><a href="#">Aigars Silkalns</a> - CEO DeerCreative</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="media">
+                          <img class="d-flex rounded-circle" src="img/testimonials-1.png" alt="">
+                          <div class="media-body">
+                              <img src="img/dotted-icon.png" alt="">
+                              <p>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</p>
+                              <h4><a href="#">Aigars Silkalns</a> - CEO DeerCreative</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="media">
+                          <img class="d-flex rounded-circle" src="img/testimonials-1.png" alt="">
+                          <div class="media-body">
+                              <img src="img/dotted-icon.png" alt="">
+                              <p>I wanted to mention that these days, when the opposite of good customer and tech support tends to be the norm, it’s always great having a team like you guys at Fancy! So, be sure that I’ll always spread the word about how good your product is and the extraordinary level of support that you provide any time there is any need for it.</p>
+                              <h4><a href="#">Aigars Silkalns</a> - CEO DeerCreative</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!--================End Testimonials Area =================-->
+
+      <!--================Project Area =================-->
+      <section class="project_area">
+          <div class="container">
+              <div class="project_inner">
+                  <div class="center_title">
+                      <h2>Ready To Discuss Your Project? </h2>
+                      <p>There are many ways to contact us. You may drop us a line, give us a call or send an email, choose what suits you the most.</p>
+                  </div>
+                  <a class="tp_btn" href="#">WORK WITH US</a>
+              </div>
+          </div>
+      </section>
+      <!--================End Project Area =================-->
+
+ <!-- == Main body starts here == -->
+
+ <!-- Modal for capacity-->
+ <div class="modal fade" id="marketCapacity" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h6 class="modal-title">What is "Market Capitalization" and how is it calculated?</h6>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+          Market Capitalization is one way to rank the relative size of a cryptocurrency. It's calculated by multiplying the Price by the Circulating Supply.
+           Market Cap = Price X Circulating Supply.How are the prices
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal for name-->
+ <div class="modal fade" id="name_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h6 class="modal-title" id="exampleModalLongTitle">Cryptocurrency</h6>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+          A digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank.
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal for price-->
+ <div class="modal fade" id="crypto_price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h6 class="modal-title" id="exampleModalLongTitle">How are the prices calculated for the various cryptocurrencies?</h6>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+          Price is calculated by taking the volume weighted average of all prices reported at each market. Sources for the prices can be found on the markets section on each cryptocurrency page. For example, Bitcoin's markets.
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal for prediction-->
+ <div class="modal fade" id="prediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h6 class="modal-title" id="exampleModalLongTitle">Price prediction of cryptocurrencies</h6>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+          We are using extrapolation method for prediction of the  price of the cryptocurrencies.
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal for price_graph-->
+ <div class="modal fade" id="price_graph" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h6 class="modal-title" id="exampleModalLongTitle">Price graph</h6>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         Prices of a cryptocurrency will be showed in a time frame when you click on the picture of the graph.
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+<!--================Footer Area =================-->
+<footer class="footer_area">
+    <div class="footer_widgets_area">
+        <div class="container">
+            <div class="f_widgets_inner row">
+                <div class="col-lg-4 col-md-6">
+                    <aside class="f_widget subscribe_widget">
+                        <div class="f_w_title">
+                            <h3>Our Newsletter</h3>
+                        </div>
+                        <p>Subscribe to our mailing list to get the updates to your email inbox.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
+                            </span>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <aside class="f_widget categories_widget">
+                        <div class="f_w_title">
+                            <h3>Link Categories</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Home</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <aside class="f_widget contact_widget">
+                      <div class="f_w_title">
+                          <h3>Contact Us</h3>
+                      </div>
+                        <h6> Md. Mehadi Hasan <br> 23rd batch, CSE department of SUST.<br><br>
+                          email: mehadi541@gmail.com<br>
+                          mobile no: 01796-777157
+                        </h6>
+                        <br><br>
+                        <h6> Mirza Karmul Bashar Shuhan <br> 23rd batch, CSE department of SUST.<br><br>
+                          email: shuhan.mirza@gmail.com<br>
+                          mobile no: 01621-416121
+                        </h6>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy_right_area">
+        <div class="container">
+            <center>
+                <h5 style="color: #D1B7B1;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Crypto2Price, SUST CSE</h5>
+            </center>
+        </div>
+    </div>
+</footer>
+<!--================End Footer Area =================-->
+
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $("#get_start_button").click(function(){
+            $("#get_start_button").slideToggle();
+        });
+    });
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Rev slider js -->
+    <script src="/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+    <script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+
+
+</body>
+</html>

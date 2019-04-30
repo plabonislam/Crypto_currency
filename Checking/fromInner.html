@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div id="container" style=" height: 400px; margin: 0 auto;"></div>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+<script >
+
+    var dataArray = [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4, 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4,
+                     29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4, 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4];
+
+    var start = + new Date();
+
+Highcharts.chart('container', {
+  chart: {
+      events: {
+          load: function () {
+              if (!window.TestController) {
+                  this.setTitle(null, {
+                      text: 'Built chart in ' + (new Date() - start) + 'ms'
+                  });
+              }
+          }
+      },
+      zoomType: 'x'
+  },
+
+
+  yAxis: {
+      title: {
+          text: 'Price (ETH)'
+      }
+  },
+
+  title: {
+      text: 'Prices of <%= NAME %>  in 2010-2018'
+  },
+
+  subtitle: {
+      text: 'WEBcrypto ...' // dummy text to reserve space for dynamic subtitle
+  },
+  series: [{
+      name: 'CryptoCurrency Price',
+      data: dataArray,
+      tooltip: {
+          valueDecimals: 1,
+          valueSuffix: 'ETH'
+      }
+  }]
+});
+
+</script>
+
+</body>
+</html>
